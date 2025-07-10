@@ -1,0 +1,30 @@
+# Node.js dependencies
+node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# Environment variables
+.env
+
+# System files
+.DS_Store
+Thumbs.db
+
+# VS Code settings
+.vscode/
+
+# Build output (if using build tools later)
+dist/
+build/
+
+# Coverage reports from testing tools (e.g. Jest)
+coverage/
+
+# OS-specific temp files
+*.tmp
+*.swp

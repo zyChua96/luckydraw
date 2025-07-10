@@ -29,8 +29,17 @@ app.post('/draw', async (req, res) => {
     res.json({ success: true, message: "You won the gift!" });
   } catch (err) {
     await connection.rollback();
-    res.status(500).json({ success: false, message: "Error", error: err });
+    console.error('Draw error:', err);
+    res.status(500).json({ success: false, message: "Error", error: err.message });
   } finally {
     connection.release();
   }
+});
+const PORT = 3000;
+app.listen(PORT, () => {
+  console.log(`Server running on http://localhost:${PORT}`);
+});
+
+app.get('/', (req, res) => {
+  res.send('Lucky Draw API is running!');
 });
